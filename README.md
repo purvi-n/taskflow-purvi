@@ -28,7 +28,7 @@ Assume you have Docker installed.
 
 1.  Clone the repository (if not already done):
     ```bash
-    git clone <repo-url>
+    git clone [<repo-url>](https://github.com/purvi-n/taskflow-purvi.git)
     cd zmt
     ```
 2.  Copy the example environment file:
