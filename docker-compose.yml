@@ -22,7 +22,7 @@ services:
     environment:
       - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-purvii}:${POSTGRES_PASSWORD:-password123}@db:5432/${POSTGRES_DB:-taskflow}
       - SECRET_KEY=${SECRET_KEY:-your-secret-key-keep-it-secret}
-    command: sh -c "/app/.venv/bin/alembic upgrade head && /app/.venv/bin/fastapi run app/main.py --port 8000 --host 0.0.0.0"
+    command: sh -c "/app/.venv/bin/alembic upgrade head && /app/.venv/bin/python -m app.db.seed && /app/.venv/bin/fastapi run app/main.py --port 8000 --host 0.0.0.0"
     depends_on:
       db:
         condition: service_healthy

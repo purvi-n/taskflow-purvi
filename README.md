@@ -28,8 +28,8 @@ Assume you have Docker installed.
 
 1.  Clone the repository (if not already done):
     ```bash
-    git clone <repo-url>
-    cd zmt
+    git clone https://github.com/purvi-n/taskflow-purvi.git
+    cd taskflow-purvi
     ```
 2.  Copy the example environment file:
     ```bash
@@ -52,7 +52,7 @@ docker compose exec web /app/.venv/bin/alembic upgrade head
 
 ## 5. Test Credentials
 
-The database is automatically seeded with a test user and sample data on first run if you run the seed script.
+The database is automatically seeded with a test user and sample data on container start.
 
 **Seed User:**
 - **Email:** `test@example.com`
@@ -64,6 +64,7 @@ docker compose exec web /app/.venv/bin/python -m app.db.seed
 ```
 
 ## 6. API Reference
+Interactive API documentation (Swagger UI) is available at `http://localhost:8000/docs` when the application is running.
 
 All non-auth endpoints require `Authorization: Bearer <token>`.
 
