@@ -29,7 +29,7 @@ Assume you have Docker installed.
 1.  Clone the repository (if not already done):
     ```bash
     git clone https://github.com/purvi-n/taskflow-purvi.git
-    cd zmt
+    cd taskflow-purvi
     ```
 2.  Copy the example environment file:
     ```bash
